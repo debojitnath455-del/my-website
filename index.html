@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Divya ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#ffdde1,#ee9ca7);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+max-width:800px;
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 8px 32px rgba(0,0,0,.2);
+z-index:2;
+}
+
+h1{
+color:#ff0066;
+font-size:3rem;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #ff66a3; }
+to{ text-shadow:0 0 25px #ff0066; }
+}
+
+.message{
+font-size:18px;
+line-height:1.8;
+color:#444;
+margin-bottom:25px;
+}
+
+.letter{
+background:rgba(255,255,255,0.35);
+padding:25px;
+border-radius:25px;
+margin-top:20px;
+line-height:1.8;
+color:#444;
+}
+
+.letter h2{
+color:#ff0066;
+margin-bottom:15px;
+}
+
+button{
+margin-top:25px;
+background:#ff0066;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:50px;
+font-size:20px;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 20px rgba(255,0,102,.5);
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.footer{
+margin-top:20px;
+font-size:18px;
+color:#555;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+color:#ff3366;
+animation:float linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.petal{
+position:fixed;
+top:-20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+.quote{
+margin-top:20px;
+font-style:italic;
+color:#ff0066;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>I'm Sorry, Divya ❤️</h1>
+
+<p class="message">
+Dear Divya,<br><br>
+
+I know I made mistakes, and for that I am truly sorry.
+
+You are one of the most precious people in my life.
+Your kindness, your smile, and the happiness you bring make every day brighter.
+
+I regret my mistakes and take responsibility for them.
+I never wanted my actions to become the reason for your sadness.
+
+Please forgive me and allow me the chance to make things right. ❤️
+</p>
+
+<div class="letter">
+<h2>❤️ Why I Love You, Divya ❤️</h2>
+
+<p>
+Divya, loving you has been one of the most beautiful parts of my life.
+Your smile has a way of making everything feel brighter, and your presence
+brings comfort and happiness into my world.
+</p>
+
+<br>
+
+<p>
+What I love most about you is your kind heart.
+The way you care, understand, and support people is truly special.
+</p>
+
+<br>
+
+<p>
+Every memory we've shared is precious to me.
+Even the simplest moments become beautiful because they are spent with you.
+</p>
+
+<br>
+
+<p>
+You inspire me to be a better person every day.
+Your strength, kindness, and beautiful personality are things I admire deeply.
+</p>
+
+<br>
+
+<p>
+No matter what happens, I will always appreciate, respect,
+and care about you from the bottom of my heart. ❤️
+</p>
+</div>
+
+<div class="quote">
+"Among all the beautiful things in my life,
+you are my favorite one, Divya ❤️"
+</div>
+
+<button onclick="forgive()">
+Divya, Please Forgive Me 💕
+</button>
+
+<p class="footer">
+Made With ❤️ Only For Divya
+</p>
+
+</div>
+
+<script>
+
+function forgive(){
+
+for(let i=0;i<100;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💖";
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top=Math.random()*100+"vh";
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},3000);
+
+}
+
+alert("Thank you Divya ❤️\nYou mean a lot to me 🌹");
+}
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+}
+
+setInterval(createHeart,300);
+
+function createPetal(){
+
+let petal=document.createElement("div");
+
+petal.classList.add("petal");
+petal.innerHTML="🌹";
+
+petal.style.left=Math.random()*100+"vw";
+petal.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(petal);
+
+setTimeout(()=>{
+petal.remove();
+},10000);
+}
+
+setInterval(createPetal,500);
+
+</script>
+
+</body>
+</html>
